@@ -1,0 +1,279 @@
+@import '_null.scss';
+
+$f: #a29bfe;
+$df: #6c5ce7;
+
+@font-face {
+	font-family: R;
+	src: url("/fonts/RobotoCondensed-Regular.ttf");
+}
+
+body {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background-color: $f;
+	background: linear-gradient(to bottom, $df 0%, $f 40%, $f 50%, $f 60%, $df 100%);
+	color: #fff;
+	font-family: R;
+}
+
+
+.hor {
+	z-index: 10;
+	position: fixed;
+	top: 30vh;
+	left: 30vw;
+	display: flex;
+	flex-direction: row;
+	transition: left 0.1s ease;
+		&__selected {
+
+		}
+
+		&__but {
+			width: 100px;
+			margin: 0 50px;
+
+			&_1 {}
+
+			&_2 {}
+
+			&_3 {}
+
+			&_4 {}
+
+			&_5 {}
+		}
+
+		&__icon {
+			width: 100px;
+			height: 100px;
+			background-color: #fff;
+			border-radius: 20px;
+
+			&_1 {}
+
+			&_2 {}
+
+			&_3 {}
+
+			&_4 {}
+
+			&_5 {}
+		}
+
+		&__title {
+			width: 100%;
+			word-wrap: wrap;
+			text-align: center;
+			font-size: 20px;
+			margin-top: 10px;
+		}
+}
+.allver {
+	z-index: 1;
+	position: fixed;
+	top: 30vh;
+	left: 30vw;
+	display: flex;
+	flex-direction: row;
+
+	&__selected {
+		opacity: 1 !important;
+		width: auto !important;
+		height: auto !important;
+	}
+}
+.ver {
+	position: absolute;
+	opacity: 0;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+
+		&__selected {
+			margin-top: 150px !important;
+		}
+	
+		&_1 {left: 50px;}
+
+		&_2 {left: 250px;}
+
+		&_3 {left: 450px;}
+
+		&_4 {left: 650px;}
+
+		&_5 {left: 850px;}
+
+		&__but {
+			margin-bottom: 40px;
+			height: 80px;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			width: 100vw;
+			min-width: 400px;
+
+			&_11 {}
+
+			&_12 {}
+
+			&_21 {}
+
+			&_22 {}
+
+			&_23 {}
+
+			&_24 {}
+
+			&_31 {}
+
+			&_32 {}
+
+			&_33 {}
+
+			&_34 {}
+
+			&_41 {}
+
+			&_51 {}
+
+			&_52 {}
+
+			&_53 {}
+
+			&_54 {}
+		}
+
+		&__icon {
+			width: 70px;
+			height: 70px;
+			background-color: #aaa;
+			border-radius: 20px;
+			margin: 15px;
+
+			&_11 {}
+
+			&_12 {}
+
+			&_21 {}
+
+			&_22 {}
+
+			&_23 {}
+
+			&_24 {}
+
+			&_31 {}
+
+			&_32 {}
+
+			&_33 {}
+
+			&_34 {}
+
+			&_41 {}
+
+			&_51 {}
+
+			&_52 {}
+
+			&_53 {}
+
+			&_54 {}
+		}
+
+		&__title {
+			line-height: 20px;
+			margin-left: 10px;
+		}
+
+		&__up-text {
+			font-size: 18px;
+		}
+
+		&__down-text {
+			word-wrap: wrap;
+		}
+}
+.content-wrapper {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 20;
+	transform: scale(0);
+}
+.tapfield {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	cursor: pointer;
+}
+.content {
+	position: absolute;
+	width: 90vw;
+	max-width: 800px;
+	height: auto;
+	padding: 30px;
+	background-color: rgba(0,0,0,0.1);
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+}
+
+
+.wave {
+	z-index: 0;
+	background-image: url("../img/wave.png");
+	position: fixed;
+	width: 6000px;
+	height: 218px;
+	top: 400px;
+	opacity: 0.1;
+	background-repeat: repeat-x;
+	transform: scale(2, 1);
+
+	&_1 {
+		animation: wave 11s ease-in-out -3s infinite alternate;
+	}
+	&_2 {
+		animation: long-wave 23s ease-in-out 0s infinite alternate;
+		transform: scale(3, 1);
+	}
+	&_3 {
+		animation: wave 36s linear -5s infinite alternate;
+	}
+	&_rev {
+		transform: scale(3, -1);
+		top: 618px;	  
+	}
+	&_4 {
+		animation: long-wave 16s ease-in-out -7s infinite alternate;
+	}
+	&_5 {
+		animation: wave 27s ease-in-out -2s infinite alternate;
+		transform: scale(2, -1);
+	}
+	&_6 {
+		animation: long-wave 41s ease-in-out -11s infinite alternate;
+	}
+}
+@keyframes wave {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -3876px;
+	}
+}
+@keyframes long-wave {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -5814px;
+	}
+}

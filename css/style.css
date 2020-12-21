@@ -1,0 +1,266 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: R;
+  src: url("/fonts/RobotoCondensed-Regular.ttf");
+}
+body {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #a29bfe;
+  background: linear-gradient(to bottom, #6c5ce7 0%, #a29bfe 40%, #a29bfe 50%, #a29bfe 60%, #6c5ce7 100%);
+  color: #fff;
+  font-family: R;
+}
+
+.hor {
+  z-index: 10;
+  position: fixed;
+  top: 30vh;
+  left: 30vw;
+  display: flex;
+  flex-direction: row;
+  transition: left 0.1s ease;
+}
+.hor__but {
+  width: 100px;
+  margin: 0 50px;
+}
+.hor__icon {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.hor__title {
+  width: 100%;
+  word-wrap: wrap;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.allver {
+  z-index: 1;
+  position: fixed;
+  top: 30vh;
+  left: 30vw;
+  display: flex;
+  flex-direction: row;
+}
+.allver__selected {
+  opacity: 1 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.ver {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+.ver__selected {
+  margin-top: 150px !important;
+}
+.ver_1 {
+  left: 50px;
+}
+.ver_2 {
+  left: 250px;
+}
+.ver_3 {
+  left: 450px;
+}
+.ver_4 {
+  left: 650px;
+}
+.ver_5 {
+  left: 850px;
+}
+.ver__but {
+  margin-bottom: 40px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  min-width: 400px;
+}
+.ver__icon {
+  width: 70px;
+  height: 70px;
+  background-color: #aaa;
+  border-radius: 20px;
+  margin: 15px;
+}
+.ver__title {
+  line-height: 20px;
+  margin-left: 10px;
+}
+.ver__up-text {
+  font-size: 18px;
+}
+.ver__down-text {
+  word-wrap: wrap;
+}
+
+.content-wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  transform: scale(0);
+}
+
+.tapfield {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+}
+
+.content {
+  position: absolute;
+  width: 90vw;
+  max-width: 800px;
+  height: auto;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+.wave {
+  z-index: 0;
+  background-image: url("../img/wave.png");
+  position: fixed;
+  width: 6000px;
+  height: 218px;
+  top: 400px;
+  opacity: 0.1;
+  background-repeat: repeat-x;
+  transform: scale(2, 1);
+}
+.wave_1 {
+  animation: wave 11s ease-in-out -3s infinite alternate;
+}
+.wave_2 {
+  animation: long-wave 23s ease-in-out 0s infinite alternate;
+  transform: scale(3, 1);
+}
+.wave_3 {
+  animation: wave 36s linear -5s infinite alternate;
+}
+.wave_rev {
+  transform: scale(3, -1);
+  top: 618px;
+}
+.wave_4 {
+  animation: long-wave 16s ease-in-out -7s infinite alternate;
+}
+.wave_5 {
+  animation: wave 27s ease-in-out -2s infinite alternate;
+  transform: scale(2, -1);
+}
+.wave_6 {
+  animation: long-wave 41s ease-in-out -11s infinite alternate;
+}
+
+@keyframes wave {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -3876px;
+  }
+}
+@keyframes long-wave {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -5814px;
+  }
+}
